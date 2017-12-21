@@ -6,14 +6,14 @@ The local zoo has a new consignment of animals. They would like an app to allow 
 ## Technical considerations
 We would like you to build the app using React, ensuring best practices are followed and the code is clean and modular. The app needs to be functional across a range of devices.
 
-If you are aren't sure about how to complete one of the tasks then please write some pseudo code to explain how you would approach the task.
+If you are aren't sure about how to complete one of the tasks then please write some pseudo code to explain how you would approach it.
 
 ## Setup
-1. Make sure you have node installed (> 8.9.2) 
+1. Make sure you have Node installed (> 8.9.2) 
 2. Clone the repository
 2. Run `npm install`
 3. To start the app run `npm start` (this will start Webpack watch)
-4. Open index.html in your browser
+4. Open `index.html` in your browser
 
 ## Tasks
 

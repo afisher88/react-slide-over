@@ -26,7 +26,7 @@ const ANIMALS = [
         limbs: 4,
         furriness: 0,
         habitat: "land"
-    }    ,
+    },
     {
         species: "Tiger",
         limbs: 4,
