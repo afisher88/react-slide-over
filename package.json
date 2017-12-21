@@ -4,14 +4,17 @@
   "description": "Motors.co.uk tech test 2018",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack --watch"
+    "start": "webpack-dev-server && webpack --watch"
   },
   "author": "",
   "license": "ISC",
-  "engines": {"node": "^8.9.2"},
+  "engines": {
+    "node": "^8.9.2"
+  },
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack-dev-server": "^2.9.7"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
