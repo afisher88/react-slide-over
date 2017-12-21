@@ -8,8 +8,6 @@ We would like you to build the app using React, ensuring best practices are foll
 
 If you are aren't sure about how to complete one of the tasks then please write some pseudo code to explain how you would approach the task.
 
-At Motors we often have to work with large lists of data so it is important to be able to handle this type of data driven application.
-
 ## Setup
 1. Make sure you have node installed (> 8.9.2) 
 2. Clone the repository
