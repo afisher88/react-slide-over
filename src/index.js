@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AnimalList from './AnimalList.jsx';
+import AnimalList from './components/AnimalList.jsx';
 
 const ANIMALS = [
     {
@@ -41,7 +41,7 @@ const ANIMALS = [
     {
         id: 6,
         species: "Centipede",
-        limbs: 100,
+        limbs: 76,
         furriness: 1,
         habitat: "land"
     },
@@ -70,7 +70,7 @@ const ANIMALS = [
         id: 10,
         species: "Eagle",
         limbs: 4,
-        furriness: 2,
+        furriness: 0,
         habitat: "air"
     }
 ];

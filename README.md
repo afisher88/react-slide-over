@@ -20,13 +20,14 @@ If you are aren't sure about how to complete one of the tasks then please write 
 ### Please complete the following tasks
 
 * Add some markup for an introductory section. Use the text from animals.txt
-* Render a list of animals using React - We have started this in `src/AnimalList.jsx`
+* Render a list of animals using React - We have started this in `AnimalList.jsx`
 * Add the following functionality to the React app to allow the user to:
 
+    * Indicate which animals are their favourites - Show a list of favourites in `Favourites.jsx`
+    * Remove animal from list
     * Sort the animals by one of their properties
     * Filter animals by number of legs
-    * Indicate which animals are their favourites.
-    * Remove animal from list
+
 * Style your components
 
 Thank you for taking the test!
