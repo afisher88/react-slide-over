@@ -15,6 +15,7 @@ At Motors we often have to work with large lists of data so it is important to b
 2. Clone the repository
 2. Run `npm install`
 3. To start the app run `npm start` (this will start Webpack watch)
+4. Open index.html in your browser
 
 ## Tasks
 
