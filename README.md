@@ -9,7 +9,7 @@ We would like you to build the app using React, ensuring best practices are foll
 If you are aren't sure about how to complete one of the tasks then please write some pseudo code to explain how you would approach it.
 
 ## Setup
-1. Make sure you have Node installed (> 8.9.2) 
+1. Make sure you have Node installed (>= 8.9.2)
 2. Clone the repository
 3. Run `npm install`
 4. To start the app run `npm start`. This will run webpack-dev-server and webpack --watch and the project will be available at http://localhost:8080/
@@ -25,8 +25,7 @@ If you are aren't sure about how to complete one of the tasks then please write 
 
     * Indicate which animals are their favourites - Show a list of favourites in `Favourites.jsx`
     * Remove animal from list
-    * Sort the animals by one of their properties
-    * Filter animals by number of legs
+    * Add some filtering and / or sorting for different properties
 
 * Style your components
 
