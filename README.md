@@ -23,8 +23,8 @@ If you are aren't sure about how to complete one of the tasks then please write 
 * Render a list of animals using React - We have started this in `AnimalList.jsx`
 * Add the following functionality to the React app to allow the user to:
 
-    * Indicate which animals are their favourites - Show a list of favourites in `Favourites.jsx`
     * Remove animal from list
+    * Indicate which animals are their favourites - Show a list of favourites in `Favourites.jsx`
     * Add some filtering and / or sorting for different properties
 
 * Style your components
