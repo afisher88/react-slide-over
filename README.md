@@ -6,13 +6,15 @@ The local zoo has a new consignment of animals. They would like an app to allow 
 ## Technical considerations
 We would like you to build the app using React, ensuring best practices are followed and the code is clean and modular. The app needs to be functional across a range of devices.
 
+We have included Redux for state management.
+
 If you are aren't sure about how to complete one of the tasks then please write some pseudo code to explain how you would approach it.
 
 ## Setup
 1. Make sure you have Node installed (>= 8.9.2)
 2. Clone the repository
 3. Run `npm install`
-4. To start the app run `npm start`. This will run webpack-dev-server and webpack --watch and the project will be available at http://localhost:8080/
+4. To start the app run `npm start`. This will run webpack-dev-server and webpack --watch and the project will be available at http://localhost:8080/ (hot reloading is enabled)
 5. Open index.html in your browser
 
 ## Tasks
@@ -23,7 +25,7 @@ If you are aren't sure about how to complete one of the tasks then please write 
 * Render a list of animals using React - We have started this in `AnimalList.jsx`
 * Add the following functionality to the React app to allow the user to:
 
-    * Remove animal from list
+    * Remove an animal from the list
     * Indicate which animals are their favourites - Show a list of favourites in `Favourites.jsx`
     * Add some filtering and / or sorting for different properties
 
