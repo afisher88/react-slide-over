@@ -25,20 +25,20 @@ class AnimalList extends React.Component {
         const { dispatch } = this.props;
 
         dispatch(selectRandomAnimal({
-            id: this.getRandomId(0, 10)
+            id: this.getRandomId(1, 10)
         }));
     }
 
     render() {
         const { animalList } = this.props;
 
-        console.log(animalList.randomAnimal || null);
+        console.log(animalList.randomAnimal || "Click the button to log an animal!");
 
         return(
             <section>
                 <Favourites />
                 <button type="button" onClick={this.selectRandomAnimal}>Console log a random animal!</button>
-                <div>{`Hello, you have a list of ${this.props.animalList.length} Animals!`}</div>
+                <div>{`Hello, you have a list of ${animalList.animals.length} Animals!`}</div>
             </section>
         )
     }
