@@ -6,7 +6,7 @@ The local zoo has a new consignment of animals. They would like an app to allow 
 ## Technical considerations
 We would like you to build the app using React, ensuring best practices are followed and the code is clean and modular. The app needs to be functional across a range of devices.
 
-We have included Redux for state management.
+We have included Redux for state management. To get you started there is a button that triggers an example action to update the store and log the result to the console. Please feel free to remove these.
 
 If you are aren't sure about how to complete one of the tasks then please write some pseudo code to explain how you would approach it.
 
