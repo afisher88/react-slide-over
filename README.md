@@ -15,7 +15,6 @@ If you are aren't sure about how to complete one of the tasks then please write 
 2. Clone the repository
 3. Run `npm install`
 4. To start the app run `npm start`. This will run webpack-dev-server and webpack --watch and the project will be available at http://localhost:8080/ (hot reloading is enabled)
-5. Open index.html in your browser
 
 ## Tasks
 
