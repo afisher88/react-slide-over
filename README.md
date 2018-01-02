@@ -1,4 +1,4 @@
-# Motors.co.uk Tech Test
+# Motors.co.uk Front End Technical Test
 
 ## Background
 The local zoo has a new consignment of animals. They would like an app to allow their keepers to view the animals, mark their favourites and sort them by such key criteria as number of limbs and furriness.
