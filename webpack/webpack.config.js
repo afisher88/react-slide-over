@@ -1,39 +1,53 @@
-const path = require('path');
-const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: './src/index.jsx',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'dist.js'
-    },
-    resolve: {
-        extensions: ['.js', '.jsx']
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['react', 'es2017', 'stage-2']
-                    }
-                }
-            },
-            {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader', 'sass-loader']
-                })
-            }
+  mode: "development",
+  entry: "./src/index.jsx",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "dist.js"
+  },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+            plugins: ["@babel/plugin-proposal-object-rest-spread", "@babel/transform-spread"]
+          },
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          "css-loader",
+          "sass-loader"
         ]
-    },
-    plugins: [
-        new ExtractTextPlugin('styles.css'),
-        new webpack.HotModuleReplacementPlugin()
+      }
+      // {
+      //     test: /\.scss$/,
+      //     use: ExtractTextPlugin.extract({
+      //         use: ["css-loader", "sass-loader"]
+      //     })
+      // }
     ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }
 
