@@ -1,4 +1,4 @@
-import * as animalActions from '../actions/animalList.actions';
+// import * as animalActions from "../actions/animalList.actions";
 
 const initialState = {
   animals: [
@@ -84,7 +84,7 @@ const initialState = {
 
 export const animalList = (state = initialState, action) => {
   switch (action.type) {
-    case 'SELECT_RANDOM_ANIMAL':
+    case "SELECT_RANDOM_ANIMAL":
 
       const randomAnimal = state.animals.find((el) => {
         return el.id === action.payload.id
