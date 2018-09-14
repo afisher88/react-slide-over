@@ -1,9 +1,10 @@
 import React from "react";
+import './AnimalList.scss';
 
 const AnimalList = ({ items }) => {
   return (
     items ?
-      <aside>
+      <aside className="animal-list">
         <ul>
           {items.map((item, i) => {
             return <li key={`animalListItem-${i}`}>{item.species}</li>

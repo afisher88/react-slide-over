@@ -1,7 +1,7 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import AnimalList from "./AnimalList";
+import AnimalList from "./AnimalList/AnimalList";
 import * as animalActions from "../actions/animalList.actions";
 import "../scss/app.scss";
 class App extends React.Component {
