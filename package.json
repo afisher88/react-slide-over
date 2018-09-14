@@ -13,9 +13,8 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
     "redux": "^3.7.2",
     "webpack-dev-server": "^2.9.7"
   },
@@ -27,9 +26,9 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.9.3",
     "path": "^0.12.7",
-    "react-redux": "^5.0.6",
+    "react-redux": "^5.0.7",
     "sass-loader": "^6.0.6",
     "webpack": "^3.10.0"
   }
