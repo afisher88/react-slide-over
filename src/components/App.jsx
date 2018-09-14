@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Favourites from './Favourites';
+import AnimalList from './AnimalList';
 import * as animalActions from '../actions/animalList.actions';
 import '../scss/styles.scss';
 
@@ -29,15 +29,16 @@ class App extends React.Component {
   }
 
   render() {
-    const { animalList } = this.props;
+    const { animalList: { animals, randomAnimal } } = this.props;
 
-    console.log(animalList.randomAnimal || "Click the button to log an animal!");
+    // console.log(animalList.randomAnimal || "Click the button to log an animal!");
 
     return (
       <section>
-        <Favourites />
-        <button type="button" onClick={this.selectRandomAnimal}>Console log a random animal!</button>
-        <div>{`Hello, you have a list of ${animalList.animals.length} Animals!`}</div>
+        <div>{`Hello, you have a list of ${animals.length} Animals!`}</div>
+        <AnimalList items={animals} />
+        <button type="button" onClick={this.selectRandomAnimal}>Show a random animal!</button>
+        <p>Random animal: {randomAnimal.species}</p>
       </section>
     )
   }
@@ -45,7 +46,7 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    animalList: state.animalList
+    animalList: state.animalList,
   }
 }
 

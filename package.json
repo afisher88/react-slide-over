@@ -1,10 +1,10 @@
 {
-  "name": "Anthony Fisher React-Redux-Webpack Starter",
+  "name": "react-redux-webpack-starter",
   "version": "1.0.0",
   "description": "Starter for using React, Redux and Webpack",
   "main": "./src/index.jsx",
   "scripts": {
-    "start": "webpack-dev-server --output-public-path=/dist/ && webpack --watch"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/webpack.config.js --output-public-path=/dist/ && webpack --watch --display-error-details"
   },
   "author": "",
   "license": "ISC",
@@ -12,10 +12,11 @@
     "node": "^8.9.2"
   },
   "dependencies": {
+    "cross-env": "^5.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "redux": "^3.7.2",
     "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "webpack-dev-server": "^2.9.7"
   },
   "devDependencies": {
