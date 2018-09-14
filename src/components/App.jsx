@@ -32,7 +32,7 @@ class App extends React.Component {
 
     return (
       <section>
-        <div>{`Hello, you have a list of ${animals.length} Animals!`}</div>
+        <p>{`Hello, you have a list of ${animals.length} Animals!`}</p>
         <AnimalList items={animals} />
         <button type="button" onClick={this.selectRandomAnimal}>Show a random animal!</button>
         <p>Random animal: {randomAnimal.species}</p>
