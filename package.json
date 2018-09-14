@@ -1,7 +1,7 @@
 {
-  "name": "motorstechtest",
+  "name": "Anthony Fisher React-Redux-Webpack Starter",
   "version": "1.0.0",
-  "description": "Motors.co.uk tech test 2018",
+  "description": "Starter for using React, Redux and Webpack",
   "main": "./src/index.jsx",
   "scripts": {
     "start": "webpack-dev-server --output-public-path=/dist/ && webpack --watch"
