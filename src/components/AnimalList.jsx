@@ -1,8 +1,17 @@
 import React from 'react';
 
-export default AnimalList = ({ items }) => {
-
+const AnimalList = ({ items }) => {
   return (
-    <aside>I show Favourites!</aside>
+    items ?
+      <aside>
+        <ul>
+          {items.map((item, i) => {
+            return <li key={`animalListItem-${i}`}>{item.species}</li>
+          })}
+        </ul>
+      </aside>
+      : <p>There are no animals!</p>
   )
 }
+
+export default AnimalList;

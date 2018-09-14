@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import AnimalList from './AnimalList';
 import * as animalActions from '../actions/animalList.actions';
 import '../scss/styles.scss';
-
 class App extends React.Component {
 
   constructor(props) {
@@ -30,8 +29,6 @@ class App extends React.Component {
 
   render() {
     const { animalList: { animals, randomAnimal } } = this.props;
-
-    // console.log(animalList.randomAnimal || "Click the button to log an animal!");
 
     return (
       <section>
