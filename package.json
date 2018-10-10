@@ -16,6 +16,7 @@
     "node": "^8.9.2"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "cross-env": "^5.2.0",
     "react": "^16.5.1",
     "react-bootstrap-table-next": "^1.2.0",

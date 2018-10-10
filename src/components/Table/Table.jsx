@@ -1,22 +1,35 @@
 import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
+import Button from './Button';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import './table.scss';
 
 export default class Table extends React.PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.columns = [{
-      dataField: 'id',
-      text: 'Product ID'
-    }, {
-      dataField: 'name',
-      text: 'Product Name'
-    }, {
-      dataField: 'price',
-      text: 'Product Price'
-    }];
+    this.columns = [
+      {
+        dataField: 'id',
+        text: 'Product ID',
+      },
+      {
+        dataField: 'name',
+        text: 'Product Name'
+      },
+      {
+        dataField: 'price',
+        text: 'Product Price'
+      },
+      {
+        dataField: 'button',
+        text: 'Button',
+        formatter: Button,
+        formatExtraData: {
+          onClick: props.togglePanel
+        }
+      }
+    ];
 
     this.products = [
       {
