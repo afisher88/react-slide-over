@@ -1,1 +1,1 @@
-export { animalList } from "./animalList.reducer";
+export { slidePanel } from "./slidePanel.reducer";

@@ -4,19 +4,26 @@ import './slidePanel.scss';
 
 export default class SlidePanel extends PureComponent {
   render() {
-    const { MasterComponent, SlideComponent, panelOpen } = this.props;
+    const { MasterComponent, SlideComponent, panelOpen, toggleFn } = this.props;
 
     return (
       <section className="slide-panel">
-        <MasterComponent />
+        {MasterComponent}
         <div className={
           classnames({
             "slide-panel__panel": true,
             "slide-panel__panel--open": panelOpen
           })
         }>
-          <button className="slide-panel__close-btn" type="button" aria-expanded={panelOpen}>Close</button>
-          <SlideComponent />
+          <button
+            className="slide-panel__close-btn"
+            type="button"
+            aria-expanded={panelOpen}
+            onClick={toggleFn.bind(null, !panelOpen)}
+          >
+            Close
+          </button>
+          {SlideComponent}
         </div>
       </section>
     )

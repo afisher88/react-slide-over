@@ -1,6 +1,7 @@
 import React from "react";
-// import { bindActionCreators } from "redux";
+import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import * as slidePanelActions from '../actions/slidePanel.actions';
 import Table from "./Table/Table";
 import SlidePanel from './SlidePanel/SlidePanel';
 import TestSlideComponent from './TestSlideComponent/TestSlideComponent';
@@ -9,44 +10,45 @@ class App extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      panelOpen: false
-    }
+    // this.state = {
+    //   panelOpen: false
+    // }
 
     this.togglePanel = this.togglePanel.bind(this);
   }
 
   togglePanel() {
-    this.setState({
-      panelOpen: !this.state.panelOpen
-    })
+    const { actions, slidePanel } = this.props;
+    // this.setState({
+    //   panelOpen: !this.state.panelOpen
+    // })
+    actions.toggleSlidePanel(!slidePanel.slidePanelOpen)
   }
 
   render() {
-    const { panelOpen } = this.state;
-
     return (
       <main>
         <SlidePanel
-          MasterComponent={() => <Table togglePanel={this.togglePanel} />}
-          SlideComponent={() => <TestSlideComponent />}
-          panelOpen={panelOpen}
+          MasterComponent={<Table togglePanel={this.togglePanel} />}
+          SlideComponent={<TestSlideComponent />}
+          panelOpen={this.props.slidePanel.slidePanelOpen}
+          toggleFn={this.props.actions.toggleSlidePanel}
         />
       </main>
     )
   }
 }
 
-// const mapStateToProps = state => {
-//   return {
-//     animalList: state.animalList,
-//   }
-// }
+const mapStateToProps = state => {
+  return {
+    slidePanel: state.slidePanel,
+  }
+}
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     actions: bindActionCreators(animalActions, dispatch)
-//   }
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(slidePanelActions, dispatch)
+  }
+}
 
-export default connect()(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
