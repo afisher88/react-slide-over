@@ -2,6 +2,23 @@ import React, { PureComponent } from 'react'
 import classnames from 'classnames';
 import './slidePanel.scss';
 
+const ToggleBtn = ({ panelOpen, toggleFn }) => {
+  function clickHandler() {
+    toggleFn(!panelOpen);
+  }
+
+  return (
+    <button
+      className="slide-panel__close-btn"
+      type="button"
+      aria-expanded={panelOpen}
+      onClick={clickHandler}
+    >
+      Close
+    </button>
+  )
+}
+
 export default class SlidePanel extends PureComponent {
   render() {
     const { MasterComponent, SlideComponent, panelOpen, toggleFn } = this.props;
@@ -15,14 +32,7 @@ export default class SlidePanel extends PureComponent {
             "slide-panel__panel--open": panelOpen
           })
         }>
-          <button
-            className="slide-panel__close-btn"
-            type="button"
-            aria-expanded={panelOpen}
-            onClick={toggleFn.bind(null, !panelOpen)}
-          >
-            Close
-          </button>
+          <ToggleBtn panelOpen={panelOpen} toggleFn={toggleFn} />
           {SlideComponent}
         </div>
       </section>
