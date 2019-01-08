@@ -10,18 +10,25 @@ class App extends React.Component {
   constructor() {
     super();
 
-    // this.state = {
-    //   panelOpen: false
-    // }
+    // Used with togglePanelState
+    this.state = {
+      panelOpen: false
+    }
 
-    this.togglePanel = this.togglePanel.bind(this);
+    this.togglePanelState = this.togglePanelState.bind(this);
+    this.togglePanelRedux = this.togglePanelRedux.bind(this);
   }
 
-  togglePanel() {
+  // Alternative to togglePanelRedux
+  togglePanelState() {
+    this.setState({
+      panelOpen: !this.state.panelOpen
+    })
+  }
+
+  togglePanelRedux() {
     const { actions, slidePanel } = this.props;
-    // this.setState({
-    //   panelOpen: !this.state.panelOpen
-    // })
+
     actions.toggleSlidePanel(!slidePanel.slidePanelOpen)
   }
 
@@ -29,10 +36,10 @@ class App extends React.Component {
     return (
       <main>
         <SlidePanel
-          MasterComponent={<Table togglePanel={this.togglePanel} />}
+          MasterComponent={<Table togglePanel={this.togglePanelRedux} />}
           SlideComponent={<TestSlideComponent />}
           panelOpen={this.props.slidePanel.slidePanelOpen}
-          toggleFn={this.props.actions.toggleSlidePanel}
+          toggleFn={this.togglePanelRedux}
         />
       </main>
     )
